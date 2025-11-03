@@ -9,7 +9,7 @@ public class BatchJobAppTest {
         assertTrue(true);
     }
      @Test
-    public void testApp() {
+    public void testApptwo() {
         assertTrue(false);
     }
 }
