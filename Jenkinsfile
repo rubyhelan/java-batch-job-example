@@ -25,7 +25,7 @@ pipeline {
         stage('Test') {
             // write your logic here
             steps{
-            bat 'mvn test'
+            bat 'mvn install test'
             }
             post {
                 always {
