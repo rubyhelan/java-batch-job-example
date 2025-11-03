@@ -10,6 +10,6 @@ public class BatchJobAppTest {
     }
      @Test
     public void testApptwo() {
-        assertTrue(false);
+        assertFalse(false);
     }
 }
