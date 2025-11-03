@@ -6,18 +6,27 @@ pipeline {
     }
     stages {
         stage('Checkout') {
-            steps {
-                // write your logic here
+            steps{
+            git url:'https://github.com/rubyhelan/java-batch-job-example.git',branch:'rubyhelan:feature/jenkin_02'
             }
         }
         stage('Build') {
             // write your logic here
+               steps{
+            bat 'mvn clean compile'
+            }
         }
         stage('Run Application') {
             // write your logic here
+               steps{
+            bat 'start /B java -jar target\\java-standalone-application.jar'
+            }
         }
         stage('Test') {
             // write your logic here
+            steps{
+            bat 'mvn test'
+            }
             post {
                 always {
                     junit 'target/surefire-reports/*.xml'
@@ -28,4 +37,13 @@ pipeline {
             // write your logic here
     }
     }
+
+     post{
+      success{
+            echo 'Pipeline executed successfully'
+            }
+     failure{
+            echo 'pipeline failed'
+                }
+            }
 }
