@@ -43,6 +43,7 @@ pipeline {
                 )
             }
         }
+        }
         post{
       always{
             echo 'Pipeline executed successfully'
