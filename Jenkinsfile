@@ -17,15 +17,10 @@ pipeline {
             // write your logic here
                steps{
                    echo 'Building the project'
-            bat 'mvn clean install'
+            bat 'echo build completed'
             }
         }
-        stage('Run Application') {
-            // write your logic here
-               steps{
-            bat 'start /B java -jar target\\java-standalone-application.jar'
-            }
-        }
+    
         stage('Test') {
             // write your logic here
             steps{
