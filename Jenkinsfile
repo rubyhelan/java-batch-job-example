@@ -19,7 +19,7 @@ pipeline {
         stage('Run Application') {
             // write your logic here
                steps{
-            bat 'start /B java -jar target\\java-standalone-application.jar'
+            bat 'start /B java -jar target\\java-batch-job-example.jar'
             }
         }
         stage('Test') {
