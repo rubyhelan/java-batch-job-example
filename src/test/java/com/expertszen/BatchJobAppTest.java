@@ -8,4 +8,5 @@ public class BatchJobAppTest {
     public void testApp() {
         assertTrue(true);
     }
+  
 }
